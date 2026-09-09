@@ -107,9 +107,6 @@ else
   Q := @
 endif
 
-.PHONY: all
-all: $(KERNEL_ISO)
-
 # Link the kernel
 $(KERNEL_ELF): $(ALL_OBJS)
 	@echo " [LD]   $@"

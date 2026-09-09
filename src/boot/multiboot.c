@@ -27,7 +27,7 @@ void multiboot2_process(uint64_t addr) {
       for (; (uint8_t *)entry < (uint8_t *)memory_map + memory_map->size;
            entry = (struct multiboot2_tag_memory_map_entry
                         *)((uint8_t *)entry + memory_map->entry_size)) {
-        vga_write("Memory map entry found\n");
+       //  vga_write("Memory map entry found\n");
       }
 
       break;

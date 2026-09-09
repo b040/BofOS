@@ -49,13 +49,14 @@ void vga_write(const char *str) {
       continue;
     } else if (*str == '\b') {
       if (cursor > 0) {
-        cursor--;
-        pointer--;
-        vga_buffer[cursor] = VGA_ENTRY(' ', VGA_COLOR_WHITE);
-        update_cursor();
+	cursor --;
+	pointer --;
+
+	vga_buffer[cursor] = VGA_ENTRY(' ', VGA_COLOR_WHITE);
+	update_cursor();
       }
-      str++;
-      continue;
+     str ++;
+     continue;
     }
     vga_buffer[cursor] = VGA_ENTRY(*str, VGA_COLOR_WHITE);
     cursor++;

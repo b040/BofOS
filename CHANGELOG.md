@@ -41,3 +41,11 @@ this is a changelog for ZorOS, view the diferent version and change's in the ope
 		* fix the "lost driver" i kernel.c
 		* add mode manually to make the iso
 
+* BUILD: 02BA:
+    * relased 09/08/2026
+    * description: add command "moo", fix bug to startup and change "info"
+    * author: miaumiausimba
+    * features:
+        * command "moo". (it's just a cow... ok?)
+        * fix the bug "Memory map entry point" in the start
+        * change the command 'info'

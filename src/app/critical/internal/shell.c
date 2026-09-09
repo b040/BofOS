@@ -60,16 +60,39 @@ void shell_prompt(void) {
           vga_clear();
         } else if (my_strcmp(line, "info") == 0) {
           info();
-        } else if (my_strcmp(line, "poweroff") == 0) {
+        } else if (my_strcmp(line, "poweroff"), my_strcmp(line, "shutdown")  == 0) {
           vga_write("\nShutting down ZorOS, se you later :D");
           for (int i = 0; i < 20; i++) {
             vga_write(".");
             timer_wait(150);
           }
           poweroff();
-        } else if (my_strcmp(line, "notepad") == 0) {
+        }else if (my_strcmp(line, "notepad") == 0) {
           notepad_run();
-        } else {
+        }else if (my_strcmp(line, "moo") == 0) {
+	  vga_write("        (__)  \n");
+	  vga_write("        (oo)  \n");
+	  vga_write("  /------\\/   \n");
+	  vga_write(" / |    ||    \n");
+ 	  vga_write("*  /\\---/\\    \n");
+ 	  vga_write("   ~~   ~~    \n");
+	}else if (my_strcmp(line, "incelcore-star") == 0) {
+		vga_write(
+    				"        @@@                 \n"
+    				"        @@@@@               \n"
+   			        "        @@@ @@@   @@@@@@   I wanna be a star  \n"
+    				"         @@@@@@@@@@ @@@    I know I'll go far \n"
+   				"  @@@@@@@@@@    @@ @@      Wanna party hard   \n"
+    				"    @@@@  @@      @@@      And wake up in the yard  \n"
+    				"       @@@@@@@   @@@@@      \n"
+    				"          @@ @@@@@@@@@@     \n"
+    				"          @@  @@@  @@@@@    \n"
+    				"          @@ @@            yey u can found a ester egg :D \n"
+    				"          @@@@              \n"
+    				"           @@@              \n"
+    				"           @@               \n"
+			);
+        }else {
           vga_write("Unknown command: ");
           vga_write(line);
           vga_write("\n");
