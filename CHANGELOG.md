@@ -49,3 +49,5 @@ this is a changelog for ZorOS, view the diferent version and change's in the ope
         * command "moo". (it's just a cow... ok?)
         * fix the bug "Memory map entry point" in the start
         * change the command 'info'
+	* Add the command 'shutdown'
+	* Fixing in idt and gdt the warning "implicit DEFAULT ABS is deprecated"
