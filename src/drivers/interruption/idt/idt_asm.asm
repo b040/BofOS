@@ -3,5 +3,5 @@ global idt_flush
 extern idt_pointer
 
 idt_flush:
-    lidt [idt_pointer]
+    lidt [abs idt_pointer]
     ret

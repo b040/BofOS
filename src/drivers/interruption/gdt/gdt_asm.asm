@@ -13,7 +13,7 @@ gdt_descriptor:
 
 [BITS 64]
 gdt_flush:
-    lgdt [gdt_descriptor]
+    lgdt [abs gdt_descriptor]
     ; flush the data segment registers
     mov ax, 0x10 
     mov ds, ax   
