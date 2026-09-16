@@ -24,8 +24,13 @@
 # directories
 build/
 bin/
+iso/
 gnu-efi/
+.cache/
 
 *.err
 *.out
+
+# Language Server Protocol generated stuff
+compile_commands.json
 
