@@ -67,4 +67,4 @@ make run
 - `LICENSE.md` for more info about license
 
 ## images
-![the zorOS running in virtualbox](doc/img/zoros_virtualbox.png)
+![the BofOS running](doc/img/BofOS_capture.jpg)
