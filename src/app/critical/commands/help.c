@@ -11,5 +11,5 @@ void help(void) {
   vga_write("clear - Clear screen\n");
   vga_write("info - Show system info\n");
   vga_write("notepad - Open notepad\n");
-  vga_write("shutdown/poweroff - Shutdown ZorOS\n");
+  vga_write("shutdown/poweroff - Shutdown BofOS\n");
 }

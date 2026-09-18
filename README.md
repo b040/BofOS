@@ -1,5 +1,5 @@
-# ZorOS - The operating system 
-operating system created by Zoros Team (only miaumiausimba), it's created for project personal use and learning purposes
+# BofOS - The ZorOS but better
+operating system created by Pan or `b040`, it's a fork from the operating system ZorOS but the objective is: Attempt to refactor the code to make it more readable.
 
 ## what is it's architecture?
 is created with x86_64 architecture, it's a monolithc kernel, it's written in C and Assembly language
@@ -8,7 +8,7 @@ use GRUB2 as bootloader (can view `iso/boot/grub/grub.cfg` and `src/boot/multibo
 
 ## explore the project
 ``` txt
-ZorOS/
+BofOS/
 ├── inc/              
 │   ├── kernel/
 │   ├── drivers/

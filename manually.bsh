@@ -6,15 +6,15 @@ echo "[1/4] Preparando directorios..."
 mkdir -p iso/boot/grub bin
 
 echo "[2/4] Copiando kernel..."
-cp build/zoros.elf iso/boot/zoros.elf
+cp build/bofos.elf iso/boot/bofos.elf
 
 echo "[3/4] Generando grub.cfg..."
 cat > iso/boot/grub/grub.cfg <<'EOF'
 set timeout=0
 set default=0
 
-menuentry "ZorOS" {
-    multiboot2 /boot/zoros.elf
+menuentry "BofOS" {
+    multiboot2 /boot/bofos.elf
     boot
 }
 EOF
@@ -22,13 +22,13 @@ EOF
 echo "[4/4] Generando ISO..."
 grub-mkrescue \
     -d "$HOME/grub-prebuilt/grub/usr/lib/grub/i386-pc" \
-    -o bin/zoros.iso \
+    -o bin/bofos.iso \
     iso/
 
 echo
 echo "=== ISO GENERADA ==="
-ls -lh bin/zoros.iso
+ls -lh bin/bofos.iso
 
 echo
 echo "=== EL TORITO ==="
-xorriso -indev bin/zoros.iso -report_el_torito plain
+xorriso -indev bin/bofos.iso -report_el_torito plain

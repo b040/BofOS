@@ -31,14 +31,14 @@ static inline void io_wait(void) { outb(0x80, 0); }
 
 void shell_init(void) {
   vga_clear();
-  vga_write("Welcome to ZorOS\n");
+  vga_write("Welcome to BofOS\n");
 }
 
 void shell_prompt(void) {
   char line[256];
   size_t line_pos = 0;
 
-  vga_write("user@ZorOS:/$ ");
+  vga_write("user@BofOS:/$ ");
 
   while (1) {
     char c = get_key();
@@ -61,7 +61,7 @@ void shell_prompt(void) {
         } else if (my_strcmp(line, "info") == 0) {
           info();
         } else if (my_strcmp(line, "poweroff"), my_strcmp(line, "shutdown")  == 0) {
-          vga_write("\nShutting down ZorOS, se you later :D");
+          vga_write("\nShutting down BofOS, se you later :D");
           for (int i = 0; i < 20; i++) {
             vga_write(".");
             timer_wait(150);
@@ -101,7 +101,7 @@ void shell_prompt(void) {
 
       // Reset prompt
       line_pos = 0;
-      vga_write("user@ZorOS:/$ ");
+      vga_write("user@BofOS:/$ ");
     } else if (c == '\b') {
       // Backspace handling
       if (line_pos > 0) {

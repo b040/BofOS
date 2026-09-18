@@ -93,8 +93,8 @@ ALL_OBJS     := $(ALL_C_OBJS) $(ALL_ASM_OBJS)
 # Dependency files
 DEPS        := $(ALL_OBJS:.o=.d)
 
-KERNEL_ELF  := $(BUILD_DIR)/zoros.elf
-KERNEL_ISO  := $(BIN_DIR)/zoros.iso
+KERNEL_ELF  := $(BUILD_DIR)/bofos.elf
+KERNEL_ISO  := $(BIN_DIR)/bofos.iso
 
 # ──────────────────────────────────────────────────────────────
 # 4. Build Rules (The Output Control)
